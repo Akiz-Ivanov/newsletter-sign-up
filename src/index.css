@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+    --color-primary: hsl(4, 100%, 67%);
+
+    --Blue800: hsl(234, 29%, 20%);
+    --Blue700: hsl(235, 18%, 26%);
+    --Grey: hsl(0, 0%, 58%);
+    --White: hsl(0, 0%, 100%);
+
+    --font-size-body: 16px;
+    --font-family-base: 'Roboto', sans-serif;
+}
+
+@layer base {
+    html {
+        font-family: var(--font-family-base);
+        font-size: (var(--font-size-body));
+    }
+}
+
+@theme {
+    --color-primary: var(--color-primary);
+    --color-blue-800: var(--Blue800);
+    --color-blue-700: var(--Blue700);
+    --color-grey: var(--Grey);
+    --color-white: var(--White);
+    --color-orange: #ff6a3a;
+    --color-pink: #f34e75;
+
+    
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+    --font-roboto: 'Roboto', sans-serif;
+
+    --text-body: var(--font-size-body);
+
+    --breakpoint-xs: 30rem;
+}
+
+h1 {
+    font-size: clamp(2.25rem, 5vw, 3.3rem);
+}
+
+.custom-list li {
+    list-style: none;
+    position: relative;
+    padding-left: 2rem;
+}
+
+.custom-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.25em;
+    width: 1rem;
+    height: 1rem;
+    background: url('/src/assets/images/icon-list.svg') no-repeat center center;
+    background-size: contain;
+}
+
+p, li {
+    -webkit-text-stroke: 0.2px var(--color-blue-800);
+    
+}

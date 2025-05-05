@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Newsletter Sign Up solution with validation and success message, built for a Frontend Mentor challenge.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/src/index.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/assets/images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <title>Newsletter Sign Up</title>
+</head>
+
+<body class="flex flex-col justify-center items-center bg-white 
+  xs:min-h-screen xs:bg-blue-700">
+  <main class="w-full xs:flex xs:justify-center">
+
+    <!-- Form Card -->
+    <div id="form-card" tabindex="-1"
+      class="card-wrapper
+      w-full min-h-screen flex flex-col items-center bg-white
+      xs:max-w-[32rem] xs:rounded-3xl xs:min-h-0 xs:m-8
+      md:max-w-[60rem] md:flex-row-reverse md:rounded-3xl shadow-md md:p-4 md:min-h-0 md:w-[95%] md:m-0 lg:rounded-4xl lg:w-full
+      tracking-wide"
+    >
+
+      <div class="image-wrapper w-full ">
+        <picture>
+          <source media="(min-width: 48rem)" srcset="/src/assets/images/illustration-sign-up-desktop.svg" />
+          <img src="/src/assets/images/illustration-sign-up-mobile.svg" alt="" id="image" class=" w-full object-cover h-full xs:rounded-2xl lg:p-1.5
+            " />
+        </picture>
+      </div>
+
+      <secion class="w-full flex flex-col items-baseline sm:justify-center px-6 pt-6 gap-5
+        m-4 lg:pt-0 lg:px-12
+        text-blue-800 font-regular"
+      >
+        <h1 class="font-bold">Stay updated!</h1>
+        <p>
+          Join 60,000+ product managers receiving monthly updates on:
+        </p>
+        <ul class="custom-list 
+        flex flex-col gap-2.5
+        
+        ">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+
+        <form id="form" novalidate class="flex flex-col gap-1.5 min-w-full mt-4">
+          <div class="flex flex-row justify-between">
+            <label for="email" class="font-bold text-sm">Email address</label>
+            <span id="error-msg"
+             class="text-orange font-bold text-sm font-roboto hidden"
+             >
+              Valid email required
+            </span>
+          </div>
+          <input id="email" type="email" required placeholder="email@company.com" class="p-3.5 rounded-lg border border-gray-300 focus:outline-none focus:ring-1 focus:ring-black  focus:border-transparent font-regular font-roboto" 
+          />
+          <button id="submit" type="submit" class="p-2.5 rounded-md mt-5 cursor-pointer
+            bg-blue-800 text-white hover:bg-blue-700 focus:outline-none focus:ring-1 focus:ring-black focus:border-transparent curs
+            hover:bg-gradient-to-r hover:from-pink hover:to-orange
+            focus:bg-gradient-to-r focus:from-pink focus:to-orange
+            font-bold font-roboto py-4 
+            hover:shadow-[0_8px_24px_-4px] hover:shadow-primary
+            focus:shadow-[0_8px_24px_-4px] focus:shadow-primary
+            transition-[box-shadow,color, background] duration-200" 
+            >
+              Subscribe to monthly newsletter
+          </button>
+        </form>
+      </secion>
+    </div>
+
+    <!-- Success Card -->
+    <div id="success-card" tabindex="-1" 
+      class="flex flex-col items-baseline justify-center p-14 gap-8 hidden
+      bg-white shadow-lg
+      text-blue-800
+      min-h-screen w-full
+      xs:w-[90%] xs:max-w-[32rem] xs:rounded-4xl xs:min-h-0 xs:p-16"
+    >
+      <div class="m-auto flex flex-col items-baseline justify-center gap-8">
+
+        <img src="/src/assets/images/icon-success.svg" alt="" class="max-w-20" />
+        <h1 class="font-bold">Thanks for subscribing!</h1>
+        <p class="text-body">
+          A confirmation email has been sent to <span id="email-span" class="font-bold"></span>. Please open it and
+          click the button
+          inside to confirm your subscription.
+        </p>
+      </div>
+      <button id="dismiss" type="button" class="p-2.5 rounded-md py-4 cursor-pointer
+        bg-blue-800 text-white focus:outline-none focus:ring-2 focus:ring-black
+        hover:bg-gradient-to-r hover:from-pink hover:to-orange
+        focus:bg-gradient-to-r focus:from-pink focus:to-orange
+        hover:shadow-[0_8px_24px_-4px] hover:shadow-primary
+        focus:shadow-[0_8px_24px_-4px] focus:shadow-primary
+        transition-[box-shadow, color, background] duration-200
+        font-bold font-roboto
+        mt-auto w-full"
+      >
+        Dismiss message
+      </button>
+    </div>
+
+  </main>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
