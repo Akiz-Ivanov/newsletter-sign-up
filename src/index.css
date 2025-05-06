@@ -61,3 +61,11 @@ h1, h2 {
 p, li {
     -webkit-text-stroke: 0.2px var(--color-blue-800);
 }
+
+button,
+a,
+input,
+textarea {
+    -webkit-tap-highlight-color: transparent;
+    background-color: inherit;
+}
